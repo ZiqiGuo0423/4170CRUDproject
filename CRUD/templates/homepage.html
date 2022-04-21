@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'popular.js') }}"></script>
+
+
+
+<div class = 'section' id = 'sec1'> 
+
+    <div class = 'container'>
+        <div class = 'row', id="first-row">
+            <div class = 'col-md-12'>
+                <div id = 'most_popular'>
+                    Most Popular Universities This Week
+                </div>
+            </div>
+         
+        </div>
+    
+        <div class = 'row',id = 'second-row'>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header" id ='card1'>
+                      
+                    </div>
+                    <div class="card-body" id = 'body1'>                       
+                                                                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header" id ='card2'>
+                      
+                    </div>
+                    <div class="card-body" id = 'body2'>
+                      
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header" id ='card3'>
+                      
+                    </div>
+                    <div class="card-body" id = 'body3'>
+                                           
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+        
+    
+    </div>
+    <div class = 'section' id = 'sec2'> 
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+
+
+<div class = 'container'>
+    <div class = 'row' id = 'success'>
+        <div class = 'col-md-12 text-center'>
+            <div class = 'input-success'>
+                New item successfully created
+            </div>
+        </div>
+    </div>
+    <div class = 'row' id = 'success'>
+        <div class = 'col-md-12 text-center'>
+            <div class = 'input-success-button'>
+                <button type="button" class="btn btn-success" id="newitem">
+                    See It Here
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div class = 'add-title'>
+                INPUT NEW DATA
+            </div>
+        </div>
+    </div>
+    <div class = 'row'>
+
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                University Name : 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="name" id = 'u-name'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-name'>
+                The name should not be empty
+            </div>
+        </div>
+    </div>
+    
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Image Url : 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="url" id = 'u-url'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-url'>
+                The url should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                QS Ranking : 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="rank" id = 'u-rank'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-rank-empty'>
+                The rank should not be empty
+            </div>
+            <div id = 'error-rank-number'>
+                The rank should be a number
+            </div>
+        </div>
+    </div>
+
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Overall Score : 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="score" id = 'u-score'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-score-empty'>
+                The score should not be empty
+            </div>
+            <div id = 'error-score-number'>
+                The score should be a number
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Department Overview : 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <textarea rows="10" placeholder="overview" id = 'u-view'></textarea>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-overview'>
+                The overview should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Application Fee: 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="fee" id = 'u-fee'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-fee'>
+                The fee should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Application Deadline: 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="deadline" id = 'u-deadline'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-deadline'>
+                The deadline should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Specialization : 
+            </div>
+            <div id = 'note'>
+                please use ',' to separate your input
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <textarea rows="6" placeholder="specialization" id = 'u-specialization'></textarea>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-specialization'>
+                The specialization should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Address: 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="address" id = 'u-add'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-address'>
+                The address should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'>
+            <div id = 'label-name'>
+                Contact Email: 
+            </div>
+        </div>
+        <div class = 'col-md-4'>
+            <input type="text" placeholder="email" id = 'u-email'>
+        </div>
+        <div class = 'col-md-4'>
+            <div id = 'error-contact'>
+                The contact should not be empty
+            </div>
+        </div>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-4'></div>
+        <div class = 'col-md-4'>
+            <button type="button" class="btn btn-success" id = 'submit'>Submit</button>
+        </div>
+    </div>
+
+    <div class = 'row' id = 'row2'>
+
+    </div>
+</div>
+
+
+{% endblock %}

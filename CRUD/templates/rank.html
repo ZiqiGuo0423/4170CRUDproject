@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script>
+
+    let id = {{id|tojson}}
+    console.log(id)
+    let rank = {{rank|tojson}}
+
+    $(document).ready(function(){
+
+        function replaceText(word) {
+            $(".rank-name").find(".highlight1").removeClass("highlight1");
+            var custfilter = new RegExp(word, "ig");
+            var repstr = "<div class='highlight1'>" + word + "</div>";
+
+            if (word != "") {
+                $('.rank-name').each(function() {
+                    $(this).html($(this).html().replace(custfilter, repstr));
+                })
+            };
+        }  
+
+        $.each(rank,function(index,value){
+            if(value['id'] == id){
+                word = value['name'];
+                console.log(word);
+            }
+        });
+
+        replaceText(word);
+
+        $('.rank-name').hover(function() {
+                $(this).addClass('hover');
+              },function() {
+                $(this).removeClass('hover');
+        });
+
+        $('.rank-name').click(function(){
+            let id = $(this).parent().attr('id');
+            console.log(id);
+
+            /* redirect the webpage to view */
+            window.location.assign("/view/"+id+"")
+        })
+
+
+    })
+</script>
+
+<div class = 'container'>
+    <div class = 'row'>
+        <div class = 'col-md-12 col-12'>
+            <div id = 'rank_title'>
+                RANKING 
+            </div>
+        </div>
+
+    </div>
+    <div class = 'row'>
+        <div class = 'col-md-12 col-12'>
+            <div id = 'list_of_rank'>
+                <ul>
+                    {% for item in rank %}
+                        <li class = 'rank-result' id = {{item.id}}>
+                            <div class = 'rank-name'>   
+                                {{item.name}}
+                            </div> 
+                            <div class = 'each'>
+                                <span> QS-RANK : </span>
+                                <span class = 'normal'>
+                                    {{item.QS_Ranking}}
+                                </span>
+                                <span class = 'each-score'>
+                                    Overall-Score : 
+                                </span>
+                                <span class ='normal'>
+                                    {{item.Overall_Score}}
+                                </span>
+                            </div>                
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

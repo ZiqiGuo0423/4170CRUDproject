@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script>
+
+    let result = {{result|tojson}}
+    var word = {{word|tojson}}
+    let result_add = {{result_add|tojson}}
+    let result_email = {{result_email|tojson}}
+    console.log(result)
+    console.log(result_add)
+    console.log(result_email)
+    console.log(word)
+
+
+    /* find the matched word and replace with css effect */
+    function replaceText() {
+
+        $(".result").find(".highlight").removeClass("highlight");
+
+        var custfilter = new RegExp(word, "ig");
+        var repstr = "<span class='highlight'>" + word + "</span>";
+        
+        if (word != "") {
+            $('.result').each(function() {
+                $(this).html($(this).html().replace(custfilter, repstr));
+            })
+        }
+    }   
+
+    $(document).ready(function(){
+
+        replaceText();
+
+        $('.result').hover(function() {
+                $(this).addClass('hover');
+              },function() {
+                $(this).removeClass('hover');
+        });
+
+        $('li').click(function(){
+            let id = $(this).attr('id');
+            console.log(id);
+
+            /* redirect the webpage to view */
+            window.location.assign("/view/"+id+"")
+        })
+
+    })
+</script>
+
+<div class = 'container'>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div id = 'result_title'>
+                Search Results for "{{word}}" 
+            </div>
+        </div>
+    </div>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div id = 'quantity'>
+                There are {{quantity}} matches :
+            </div>
+        </div>
+    </div>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div class = 'match'>
+                Name
+            </div>
+            <div class = 'list_of_result'>
+                <ul>
+                    {% for item in result %}
+                        <li class = 'result' id = {{item.id}}>
+                            {{item.name}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div class = 'match'>
+                Address
+            </div>
+            <div class = 'list_of_result'>
+                <ul>
+                    {% for item in result_add %}
+                        <li class = 'result' id = {{item.id}}>
+                            {{item.address}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>  
+    </div>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div class = 'match'>
+                Contact
+            </div>
+            <div class = 'list_of_result'>
+                <ul>
+                    {% for item in result_email %}
+                        <li class = 'result' id = {{item.id}}>
+                            {{item.contact}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class = 'row' id = 'row2'>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

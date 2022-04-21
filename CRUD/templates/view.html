@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script>
+    let university = {{university|tojson}} 
+    console.log(university)
+
+    $(document).ready(function(){
+
+        $('.rankbutton').click(function(){
+            let id = $(this).attr('id');
+            console.log(id);
+
+            /* redirect the webpage to rank */
+            window.location.assign("/rank/"+id+"")
+        });
+
+        $('.button-style').click(function(){
+            let id = $(this).attr('id');
+            console.log(id);
+            window.location.assign("/edit/"+id+"")
+        })
+
+    })
+</script>
+
+<div class = 'section' id = 'sec3'>
+    <div class = 'container' id = 'cont'>
+        <div class = 'row'>
+            <div class = 'col-md-8'>
+                <div id = 'university_name'>
+                    {{university.University_Name}}
+                </div>
+                <img src= {{university.Image}} alt= "{{university.University_Name}}">
+                <div id = 'overview'>
+                    <span id = 'doverview'>Department Overview :</span>  
+                    <div class = 'sometext'>
+                        {{university.Department_Overview}}
+                    </div>
+                </div>
+            </div>
+            <div class = 'col-md-4'>
+                <div id = 'rank'>
+                    <button class="btn btn-success my-2 my-sm-0 rankbutton" id = {{university.id}}>QS Ranking</button>  : {{university.QS_Ranking}}                    
+                </div>
+                <div id = 'score'>
+                    <button class="btn btn-success my-2 my-sm-0 rankbutton" id = {{university.id}}>Overall Score</button>  : {{university.Overall_Score}} 
+                </div>
+                <div id= "fee">
+                    <span>Application Fee</span> : {{university.Application_Fee}}
+                </div>
+                <div  id = 'deadline'>
+                    <span>Application Deadline</span> : {{university.Application_Deadline}}
+                </div> 
+                <div id = 'specialization'>
+                    <span>Specialization</span>:
+                    <ul class= 'list'>
+                        {% for subject in university.Specialization %}
+                            <li>
+                                {{subject}}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+        <div class = 'row' id = 'address'>
+            <div class = 'col-md-12'>
+                {{university.address}}
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col-md-12' id = 'contact'>
+               {{university.contact}}
+            </div>
+        </div>
+
+        <div class = 'row'>
+            <div class = 'col-md-12' id = 'edit'>
+                <button type="button" class="btn button-style" id = {{university.id}}>Edit</button>
+            </div>
+        </div>
+
+        <div class = 'row' id = 'row2'>
+            
+        </div>
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

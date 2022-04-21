@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class = 'container'>
+    <div class = 'row'>
+        <div class = 'col-md-12'>
+            <div id = 'result_title'>
+                Search Results for "{{word}}" 
+            </div>
+        </div>
+    </div>
+    <div class = 'row'> 
+        <div class = 'col-md-12'>
+            <div id = 'no_found'>
+                No results found
+            </div>            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

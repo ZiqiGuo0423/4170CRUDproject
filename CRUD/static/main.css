@@ -1,0 +1,320 @@
+/* css of nav-bar */
+body{
+    background-color: rgb(226, 244, 250);
+}
+.navbar-custom {
+    background-color: rgba(230, 227, 227);
+}
+.navbar-brand{
+    font-size:20px;
+    font-weight: bold;
+    color:rgb(126, 123, 123);
+}
+
+#newdata{
+    margin-left:300px;
+}
+
+#search{
+    font-weight: bold;
+}
+
+/* css of homepage */
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#sec2{
+    height:80px;
+    background-color: rgb(226, 244, 250);
+}
+
+#first-row{
+    padding-top:150px;
+    height:50px;
+    margin-bottom:150px;
+}
+
+#most_popular{
+    font-size : 40px;
+    font-weight: bold;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card-header{
+    background-color: rgba(230, 227, 227);
+    height:80px;  
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.card:hover{
+    cursor:pointer;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-body{
+    height:400px;
+    margin-top:10px;
+    font-size:20px;
+    font-weight: bold;
+    color:rgb(126, 123, 123);
+}
+
+
+/* css of view page */
+#sec3{
+    background-color: rgb(226, 244, 250);
+}
+#row2{
+    height:50px;
+}
+
+#university_name{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+img{
+    padding-top:20px;
+    width: 100%;
+   
+}
+
+#doverview{
+    font-size:25px;
+    color:rgb(126, 123, 123);
+}
+
+#overview{
+    font-size:20px;
+    margin-top:30px;
+}
+
+span{
+    font-size:18px;
+    color:rgb(126, 123, 123);
+}
+
+#rank{
+    margin-top:80px;
+    font-size:25px;
+    color:black;
+    padding-left:40px;
+}
+
+#score{
+    margin-top:20px;
+    font-size:25px;
+    color:BLACK;
+    padding-left:40px;
+}
+
+#specialization,#fee,#deadline{
+    padding-left:40px;
+    font-size:18px;
+    padding-top:10px;
+}
+
+#fee{
+    padding-top:40px;
+}
+
+#specialization{
+    padding-top:40px;
+}
+
+.list{
+    list-style:circle;
+    padding-left: 15px;
+}
+
+ul{
+    list-style: none;
+}
+
+#address{
+    padding-top:50px;
+    color:rgb(126, 123, 123);
+    font-size:15px;
+}
+
+#contact{
+    color:rgb(126, 123, 123);
+    font-size:15px;
+}
+
+
+/* search-result*/
+
+.highlight{ 
+    color:rgb(126, 123, 123);
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 5px 5px 10px #00FF00;
+}
+
+
+
+#result_title{  
+    color:black;
+    font-weight: bold;
+    font-size:40px;
+    padding-top:80px;
+    margin-left:40px;
+
+}
+
+#quantity{
+    padding-top:10px;
+    margin-left:40px;
+    color:rgb(126, 123, 123);
+    font-weight: bold;
+    font-size:30px;
+}
+
+.result{
+    padding-top:15px;
+    font-size:25px;
+    color:rgb(126, 123, 123);
+
+}
+
+.match{
+    padding-top:30px;
+    margin-left:40px;
+    color:black;
+    font-weight: bold;
+    font-size:25px;
+}
+
+#no_found{
+    margin-left:40px;
+    margin-top:20px;
+    font-size:25px;
+    color:rgb(126, 123, 123);
+}
+
+
+/* rank.html */
+#rank_title{
+    color:black;
+    font-weight: bold;
+    font-size:40px;
+    padding-top:80px;
+    margin-left:40px;
+}
+
+#list_of_rank{
+    position:relative;
+    padding-top:30px;
+}
+
+.rank-name{
+    color:black;
+    font-size: 30px;
+}
+
+.highlight1{ 
+    color:black;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 5px 5px 10px #00FF00;
+}
+
+.hover{
+    color: rgb(7, 201, 0);
+    cursor: pointer;
+}
+
+.rank-result{
+    padding-top:15px;
+}
+
+.each{
+    font-size:20px;
+    color:rgb(126, 123, 123);
+    font-weight: bold;
+}
+
+.each-score{
+    padding-left:15px;
+}
+
+.normal{
+    font-weight:normal;
+}
+
+
+/* add data */
+.add-title{
+    color:black;
+    font-weight: bold;
+    font-size:40px;
+    padding-top:80px;
+    margin-left:40px;
+}
+
+#label-name{
+    color:rgb(126, 123, 123);
+    font-size:20px;
+    padding-top:20px;
+    margin-left:40px;
+}
+
+#note{
+    color: rgb(172, 167, 167);
+    margin-left:40px;
+    font-size:15px;
+}
+
+#u-name,#u-url,#u-rank,#u-score,#u-view,#u-fee,#u-deadline,#u-specialization,#u-add,#u-email{
+    width:280px;
+    margin-top:20px;
+    margin-left:40px;
+}
+
+#submit{
+    margin-top:20px;
+    margin-left:40px;
+}   
+
+#error-name,#error-url,#error-rank-empty,#error-rank-number,#error-score-empty,#error-score-number,#error-overview,#error-fee,#error-deadline,#error-specialization,#error-address,#error-contact{
+    width:280px;
+    margin-top:20px;
+    margin-left:40px;
+    color:red;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.input-success{
+    margin-top: 40px;
+    color: #0e920e;
+    font-weight: bold;
+    font-size:30px;
+}
+
+.input-success-button{
+    margin-top:10px;
+}
+
+
+/* edit data */
+
+.button-style{
+    margin-top :20px;
+    color:rgb(172, 167, 167);
+    background-color: rgba(230, 227, 227);
+}
+
+.editbutton{
+    margin-top:20px;
+    margin-left:40px;
+}
